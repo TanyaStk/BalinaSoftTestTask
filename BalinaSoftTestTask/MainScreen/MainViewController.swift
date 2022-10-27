@@ -85,10 +85,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, UIScro
         
         picker.dismiss(animated: true)
         
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+        guard let image = info[.originalImage] as? UIImage else {
             return
         }
         
-        serviceProvider.postData(name: "Tanya Samostroenko", image: image, typeId: selectedCellIndex)
+        serviceProvider.postData(name: "Samostroenko Tatsiana Sergeevna", image: image, typeId: selectedCellIndex)
     }
 }
